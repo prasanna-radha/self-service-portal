@@ -5,17 +5,17 @@
     </button> 
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-          <a class="nav-link" routerLink="['/']" >Allocation Reports <span class="sr-only">(current)</span></a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/allocation">Allocation Reports</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="['/projects']">Projects</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/project" routerLinkActive="active">Review Allocation</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="['/employee']">Employee Details</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/employee">Review Employee</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="['/users']">Users</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/user">User Management</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
