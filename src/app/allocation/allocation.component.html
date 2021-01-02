@@ -1,0 +1,22 @@
+<div class="row pull-right">
+    <div class="col-md-12" >
+        <button class="btn btn-sm btn-primary">Upload Report</button><br /><br />
+    </div>
+</div>
+<div class="row pull-right">
+    <div class="col-md-12">
+        <div>
+            <ag-grid-angular
+            #agGrid
+            style="height: 520px; width:1020px"
+            class="ag-theme-alpine"
+            [rowData]="rowData"
+            [columnDefs]="columnDefs"
+            [pagination]="true"
+            [paginationPageSize]=10
+            (gridReady)="onGridReady($event)">
+        </ag-grid-angular>
+        </div>
+    </div>  
+</div>
+

@@ -1,0 +1,34 @@
+<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-dark">
+    <a class="navbar-brand" routerLink="['/']">ESA Self Service Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> 
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link" routerLink="['/']" >Allocation Reports <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="['/projects']">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="['/employee']">Employee Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="['/users']">Users</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <button class="btn btn-md btn-info">
+            <i class="fa fa-user fa-1x"></i>
+            John Abbort (Manager)
+          </button>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            Signup</a>
+        </li>
+      </ul> 
+    </div>
+  </nav>  
