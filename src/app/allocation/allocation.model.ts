@@ -1,12 +1,9 @@
-import { IAllocation } from "../models/allocation";
-
-export class Allocation implements IAllocation{
+export class Allocation {
 
     public id: number;
-    public reportId: string;
     public reportName: string;
     public status: string;
-    public uploadedBy: string;
+    public uploadedBy: number;
     public uploadedDate: string;
     public reviewedDate: string;
     public employeeCount: number;
@@ -14,17 +11,15 @@ export class Allocation implements IAllocation{
 
     constructor(
         id: number, 
-        reportId: string,
         reportName: string,
         status: string,
-        uploadedBy: string,
+        uploadedBy: number,
         uploadedDate: string,
         reviewedDate: string,
         employeeCount: number,
         totalProjects: number   
     ){
         this.id=id;
-        this.reportId = reportId;
         this.reportName = reportName;
         this.status = status;
         this.uploadedBy = uploadedBy;

@@ -1,1 +1,80 @@
-<p>project works!</p>
+<div class="container">
+    <div class="row">
+        <section class="col-1"></section>
+        <section class="col-10">
+            <div class="row d-flex justify-content-between justify-content-center ml-4 pb-2">
+                <div class="card border-secondary">
+                    <div class="form-inline card-body">
+                        <input type="text" class="form-control" style="width: 150px;" placeholder="Project ID">
+                        <input type="text" class="form-control ml-1" style="width: 150px;" placeholder="Employee ID">
+                        <input type="text" class="form-control ml-1" style="width: 200px;" placeholder="Allocation End Date">
+                        <input type="text" class="form-control ml-1" style="width: 200px;" placeholder="Billing Type">
+                        <button type="button" class="btn btn-primary btn-sm ml-2">Search</button>
+                    </div>   
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between align-item-right pb-2 mr-12">
+                <header>
+                    <span *ngIf="totalCount && totalCount > 0"> 
+                        Showing 
+                        <strong>
+                            {{ (this.pageParams.pageNumber-1) * this.pageParams.pageSize+1 }} -
+                            {{ this.pageParams.pageNumber*this.pageParams.pageSize
+                                > this.totalCount
+                                ? this.totalCount
+                                : this.pageParams.pageNumber*this.pageParams.pageSize }} 
+                        </strong>
+                        of 
+                        <strong>{{this.totalCount}}</strong> Results
+                    </span>
+                </header>
+            </div>
+            <div class="row">
+                <div class="table table-responsive ">
+                    <table class="table table-sm bordered ">
+                        <thead>
+                            <tr>
+                                <th>Project ID</th>
+                                <th>Employee ID</th>
+                                <th>Allocation %</th>
+                                <th>Allocation Type</th>
+                                <th>Allocation Start</th>
+                                <th>Allocation End</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let employee of employees">
+                            <tr>
+                                <td> {{ employee.projectId}} </td>
+                                <td> {{ employee.associateId}} </td>
+                                <td> {{ employee.allocationPercentage}} </td>
+                                <td> {{ employee.associateBillability}} </td>
+                                <td> {{ employee.allocationStartDate}} </td>
+                                <td> {{ employee.allocationEndDate}} </td>
+                                <td><a href="#">Edit</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="d-flex justify-content-center pb-2" *ngIf="totalCount > 0">
+                        <pagination 
+                        [boundaryLinks]="true" 
+                        [totalItems]="18"
+                        (pageChanged)="onPageChanged($event)"
+                        [itemsPerPage]="pageParams.pageSize"
+                        previousText="&lsaquo;" 
+                        nextText="&rsaquo;" 
+                        firstText="&laquo;" 
+                        lastText="&raquo;">
+                        </pagination>                
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <span class="text-primary" *ngIf="totalCount == 0">
+                            No records found.
+                        </span>   
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="col-1"></section>
+    </div>
+</div>

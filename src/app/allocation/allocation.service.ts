@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import { Injectable } from '@angular/core';
 import { Allocation } from './allocation.model';
 
 @Injectable({
@@ -13,6 +13,5 @@ export class AllocationService {
 
   getAllocations(){
     return this.http.get<Allocation[]>(this.baseUrl + "allocations");
-    //return this.http.get(this.baseUrl + "allocations");
   }
 }

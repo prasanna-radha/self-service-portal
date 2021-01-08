@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
 import { AllocationModule } from './allocation/allocation.module';
+import { ProjectModule } from './project/project.module';
+
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -19,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,    
-    AllocationModule
+    AllocationModule,
+    ProjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

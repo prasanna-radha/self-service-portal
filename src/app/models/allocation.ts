@@ -1,9 +1,8 @@
 export interface IAllocation {
-    id: number;
-    reportId: string;
+    id: number; 
     reportName: string;
     status: string;
-    uploadedBy: string;
+    uploadedBy: number;
     uploadedDate: string;
     reviewedDate: string;
     employeeCount: number;

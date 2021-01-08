@@ -16,7 +16,6 @@ export class AllocationComponent implements OnInit {
   public defaultColDef;
   public columnTypes;
   public rowData: Allocation[] = [];
-  //allocations: Allocation[] = [];
 
   pageTitle = "";
   
@@ -28,8 +27,6 @@ export class AllocationComponent implements OnInit {
     this.columnDefs = [
       //Hide column
       { headerName: 'ID', field: 'id', sortable: true, filter: true, hide:true },
-      //Hide column
-      { headerName: 'Report ID', field: 'reportId', sortable: true, filter: true,  hide:true, width: 120 },
       { headerName: 'Report Name', field: 'reportName', sortable: true, filter: true,  width: 150,
       //Enable hyperlink 
       cellRenderer: function(params) {
@@ -78,7 +75,6 @@ export class AllocationComponent implements OnInit {
       console.log(error);
     });
   }
-
 
   ngOnInit(): void {
     this.allocationService.getAllocations().subscribe(response => { 

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AgGridModule } from 'ag-grid-angular';
-
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 
 import { CommonModule } from '@angular/common';
 import { AllocationComponent } from './allocation.component';
@@ -9,7 +9,8 @@ import { AllocationComponent } from './allocation.component';
   declarations: [AllocationComponent],
   imports: [
     AgGridModule.withComponents([]),
-    CommonModule
+    CommonModule,
+    ButtonsModule.forRoot()
   ],
   exports: [AllocationComponent]
 })
